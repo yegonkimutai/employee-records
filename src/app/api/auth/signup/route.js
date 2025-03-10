@@ -10,18 +10,14 @@ export async function POST(req) {
       const { firstName, lastName, email, password } = await req.json();
   
       if (!firstName || !lastName || !email || !password) {
-        return new NextResponse(JSON.stringify({ error: "All fields are required" }), {
-          status: 400,
-          headers: { "Content-Type": "application/json" },
-        });
+        return new NextResponse.json({ error: "All fields are required" }), { status: 400
+        };
       }
   
       const existingUser = await User.findOne({ email });
       if (existingUser) {
-        return new NextResponse(JSON.stringify({ error: "User already exists" }), {
-          status: 400,
-          headers: { "Content-Type": "application/json" },
-        });
+        return new NextResponse.json({ error: "User already exists" }), { status: 400,
+        };
       }
   
       const hashedPassword = await bcrypt.hash(password, 10);
@@ -35,16 +31,13 @@ export async function POST(req) {
   
       await newUser.save();
   
-      return new NextResponse(JSON.stringify({ message: "User registered successfully" }), {
-        status: 201,
-        headers: { "Content-Type": "application/json" },
-      });
+      return new NextResponse.json({ message: "User registered successfully" }), { status: 201,
+      };
     } catch (error) {
       console.error("Signup error:", error);
-      return new NextResponse(JSON.stringify({ error: "Internal Server Error" }), {
+      return new NextResponse.json({ error: "Internal Server Error" }), {
         status: 500,
-        headers: { "Content-Type": "application/json" },
-      });
+      };
     }
   }
   
