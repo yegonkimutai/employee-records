@@ -17,7 +17,7 @@ export default function LoginPage() {
     <div className="min-h-screen flex items-center justify-center bg-gray-100">
       <form onSubmit={handleLogin} className="bg-white p-6 rounded shadow-md w-80 text-black">
           <p className="text-sm text-center mt-2">
-             Not registered? <Link href="/" className="text-green-500">Sign in</Link>
+             Not registered? <Link href="/" className="text-green-500">Sign up</Link>
            </p>
         <h2 className="text-2xl font-bold mb-4">Login</h2>
         <input className="w-full p-2 border mb-2" type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
