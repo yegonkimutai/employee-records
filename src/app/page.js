@@ -41,7 +41,6 @@ export default function SignUp() {
 
   return (
     <div className="min-h-screen flex flex-col md:flex-row items-center justify-center bg-gray-100">
-      {/* Left Side - Image Section */}
       <div className="hidden md:flex w-1/2 h-screen bg-cover bg-center" style={{ backgroundImage: "url('/bakery.jpg')" }}>
         <div className="bg-black bg-opacity-50 w-full h-full flex items-center justify-center text-white text-center p-6">
           <div>
@@ -51,7 +50,6 @@ export default function SignUp() {
         </div>
       </div>
 
-      {/* Right Side - Form Section */}
       <div className="w-full md:w-1/2 flex items-center justify-center p-6">
         <div className="bg-white p-8 rounded-lg shadow-lg w-full max-w-md text-black">
           <h2 className="text-2xl font-bold text-navy-900 text-center">Create your free account</h2>

@@ -23,7 +23,7 @@ const UserSchema = new mongoose.Schema(
     },
     permissions: {
       canEditProfile: { type: Boolean, default: true },
-      canManageEmployees: { type: Boolean, default: false }, // Only for admins
+      canManageEmployees: { type: Boolean, default: false },
     },
   },
   { timestamps: true }

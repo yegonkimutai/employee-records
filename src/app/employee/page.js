@@ -36,7 +36,6 @@ export default function EmployeeTable() {
   };
 
   const deleteEmployee = async (id) => {
-    console.log("Deleting employee with ID:", id); // Debugging
     await axios.delete(`/api/employees?id=${id}`);
     fetchEmployees();
   };
