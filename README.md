@@ -2,7 +2,27 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 
 ## Getting Started
 
-First, run the development server:
+First, I initialized Next.js app:
+
+```bash
+npx create-next-app@latest employee-records
+```
+
+I then navigated to the directory and install the required dependencies which include mongoose, next-auth, tailwind and axios.
+
+After that, I set up the tailwind sonfiguration and also establish the MongoDB which is found in the 'lib' folder
+
+Setting up the backend configuration was the next step where I create the User and Employee models in the model folder.
+
+I then went ahead and wrote the functionality for posting and getting of user as well as the CRUD operations that are done to the employees using Next.js as instructed. These functions are located in the src/app/api folder.
+
+After finishing the backend operation, I proceeded to the front end where I creted the UI according to the figma design provided. These files are located under src/app/add, src/app/employee, src/app/login as well as the page.js file.
+Above the UI file it starts with the "use client", which informs Next.js that the file should be rendered client side.
+
+I also configured the database uri in the .env.local file under the name MONGODB_URI
+
+
+Finally, I ran the development server:
 
 ```bash
 npm run dev
@@ -16,9 +36,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+## Note
+The deployed version only shows the signup and login UI as it generates error when one is trying to log in (still working on how to fix it). However, the development version is ready and everything is working perfectly and in accordance to the instructions given.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
 ## Learn More
 
